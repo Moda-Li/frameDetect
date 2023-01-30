@@ -20,7 +20,7 @@ namespace greenDetect
                 const int U = (*(src + offset) - 128);
                 const int V = (*(src + offset + 1) - 128);
                 
-                if (60 + 0.34413 * U + 2.11614 * V < 0 && 60 + 0.71414 * (V - 128) + 2.11613 * (U - 128) < 0)
+                if (60 + 0.34413 * U + 2.11614 * V < 0 && 60 + 0.71414 * V + 2.11613 * U < 0)
                 {   //is green point
                     ++green_point_count;
                 }
@@ -51,7 +51,7 @@ namespace greenDetect
                 const int U = (*(src + u_stride) - 128);
                 const int V = (*(src + v_stride) - 128);
 
-                if (60 + 0.34413 * U + 2.11614 * V < 0 && 60 + 0.71414 * (V - 128) + 2.11613 * (U - 128) < 0)
+                if (60 + 0.34413 * U + 2.11614 * V < 0 && 60 + 0.71414 * V + 2.11613 * U < 0)
                 {   //is green point
                     ++green_point_count;
                 }

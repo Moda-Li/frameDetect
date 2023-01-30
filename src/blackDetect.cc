@@ -22,7 +22,7 @@ namespace blackDetect
             }
         }
         float precnt = (float)black_point_count / (w * h);
-        printf("---- detectYUV %d / %d = %f\r\n", black_point_count, w * h, precnt);
+        //printf("---- detectYUV %d / %d = %f\r\n", black_point_count, w * h, precnt);
         if (precnt > 0.93)
         {   //is black frame
             return frameDetect::kBlackDetect;
